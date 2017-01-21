@@ -7,10 +7,12 @@ const express = require('express');
 const app = express();
 
 const mysql = require('mysql');
+const nodeSql = require('nodesql');
 
 if (ENV == 'development') {
 	const sqlite3 = require('sqlite3').verbose();
 	var connection = new sqlite3.Database('plusone.db');
+	var db = nodeSql.createSqliteStrategy(connection);
 } else {
 	var connection = mysql.createConnection({
 		'host': config.HOST,
@@ -19,10 +21,10 @@ if (ENV == 'development') {
 		'database': config.DATABASE,
 		'multipleStatements': true
 	});
+	var db = nodeSql.createMySqlStrategy(connection);
 }
 
-const nodeSql = require('nodesql');
-const db = nodeSql.createMySqlStrategy(connection);
+require('./create.tables.js')(db);
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());

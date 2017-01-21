@@ -49,7 +49,29 @@ module.exports = (db) => {
             }
           }
         );
-      }
+      },
+      (callback) => {
+        db.query(
+          `
+            CREATE TABLE IF NOT EXISTS UserInterest
+            (
+                UserInterest_Id VARCHAR(36) NOT NULL PRIMARY KEY,
+                User_Id FOREIGN KEY REFERENCES User(User_Id),
+                Interest_Id FOREIGN KEY REFERENCES Interest(Interest_Id),
+                UserInterest_DateCreated DATE,
+                UserInterest_DateUpdated DATE
+            );
+          `,
+          (err, rows) => {
+            if (err) {
+              throw err;
+            } else {
+              console.log("UserInterest table created...");
+              return callback();
+            }
+          }
+        );
+      },
     ],
     () => {
       console.log("Table propogation complete...")

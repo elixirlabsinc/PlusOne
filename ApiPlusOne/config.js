@@ -1,5 +1,5 @@
 module.exports = (ENV) => {
-  if (ENV == "development") {
+  if (ENV == 'development') {
     return {
         'ENV': ENV,
         'HOST': 'localhost',

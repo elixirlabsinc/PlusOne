@@ -11,4 +11,4 @@
 ### Web Usage
 
 1. Must have `angular-cli` installed globally
-2. Must run `ng serve` in the WebPlusOne directory
+2. Must run `npm start` in the WebPlusOne directory

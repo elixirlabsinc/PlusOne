@@ -1,0 +1,72 @@
+@import "../app.component.scss";
+
+a.plus-button {
+  color: white;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+div.send-message {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border-top: 2px solid $primary;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+  textarea{
+    box-shadow: none;
+    width: calc(100% - 100px);
+    height: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  a.small-btn {
+    background: $primary;
+    color: white;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+div.message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+  &.reverse {
+    flex-direction: row-reverse;
+    img {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+    div.text-wrap {
+      background: $primary;
+    }
+  }
+  img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    box-shadow: 2.5px 2.5px 5px $shadow;
+    margin-right: 15px;
+  }
+  div.text-wrap {
+    width: calc(100% - 65px);
+    height: auto;
+    background: $accent;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px 5px $shadow;
+    color: white;
+    padding: 10px;
+  }
+}

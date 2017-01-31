@@ -1,0 +1,29 @@
+@import "../app.component.scss";
+
+a.plus-button {
+  color: white;
+}
+
+div.nav-buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  a.nav-button {
+    border-radius: 25px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background: $accent;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 25px;
+    cursor: pointer;
+  }
+}

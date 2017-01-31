@@ -1,0 +1,41 @@
+@import "../app.component.scss";
+
+a.plus-button {
+  color: white;
+}
+
+div.match {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+  img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    box-shadow: 2.5px 2.5px 5px $shadow;
+    margin-right: 15px;
+  }
+  div.text-wrap {
+    width: calc(100% - 65px);
+    height: auto;
+    div.button-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      h2, p {
+        margin: 0;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      a {
+        width: 50%;
+        font-size: 14px;
+        padding: 5px;
+        margin: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="card">
+    <div class="nav-buttons">
+      <a class="nav-button" (click)="prevStep()">
+        Back
+      </a>
+      <a class="nav-button" (click)="nextStep()">
+        Next
+      </a>
+    </div>
+    <div class="card-block" [hidden]="step != 1">
+      <h2 class="text-center">Which languages do you speak?</h2>
+      <a class="plus-button">
+        Language 1
+      </a>
+      <a class="plus-button">
+        Language 2
+      </a>
+      <a class="plus-button">
+        Language 3
+      </a>
+      <a class="plus-button">
+        Language 4
+      </a>
+      <a class="plus-button">
+        Language 5
+      </a>
+    </div>
+    <!-- End of Card 1 -->
+    <div class="card-block" [hidden]="step != 2">
+      <h2 class="text-center">Are you a Newcomer or a Local?</h2>
+      <a class="plus-button">
+        Newcomer
+      </a>
+      <a class="plus-button">
+        Local
+      </a>
+    </div>
+    <!-- End of Card 3 -->
+    <div class="card-block" [hidden]="step != 3">
+      <h2 class="text-center">We promise to never share your information.</h2>
+      <p class="label">Email</p>
+      <input type="text"/>
+      <p class="label">Password</p>
+      <input type="text"/>
+      <p class="label">Confirm Password</p>
+      <input type="text"/>
+      <a class="plus-button">
+        Sign up for +One
+      </a>
+    </div>
+    <!-- End of Card 3 -->
+  </div>
+</div>

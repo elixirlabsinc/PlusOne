@@ -161,7 +161,7 @@ module.exports = (db) => {
       (callback) => {
         db.query(
           `
-            CREATE TABLE IF NOT EXISTS Match_Users
+            CREATE TABLE IF NOT EXISTS Match_User
             (
                 Match_User_Id VARCHAR(36) NOT NULL PRIMARY KEY,
                 User_Id VARCHAR(36),
@@ -172,7 +172,7 @@ module.exports = (db) => {
             if (err) {
               throw err;
             } else {
-              console.log("Match_Users table created...");
+              console.log("Match_User table created...");
               return callback();
             }
           }

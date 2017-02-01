@@ -8,11 +8,7 @@ function REST_ROUTER (router,connection,md5) {
 }
 
 REST_ROUTER.prototype.handleRoutes = function (router,connection,md5) {
-	router.get ("/",function(req,res){
-           res.json ({"Message" : "Hello World !"});
-    });
 
-	
 	/*** USERS
 	{"userId":"1", "userType":"Newcomer", "userEmail":"ron@nair.com", "userFacebookId":"ronnie", "userTwitterId":"ronnie", "userPinterestId":"ronnie", "userPassword":"lol"}
 	{
@@ -27,7 +23,6 @@ REST_ROUTER.prototype.handleRoutes = function (router,connection,md5) {
       "User_DateUpdated": "2017-01-31"
     }
     ***/
-
 	router.post ("/user",function (req,res) {
 		var query = "INSERT INTO User (User_Id, User_Type, User_Email, User_FacebookId, User_TwitterId, User_PinterestId, User_Password, User_DateCreated, User_DateUpdated) VALUES (?,?,?,?,?,?,?,date('now'),date('now'))";
 		db.serialize(function () {
